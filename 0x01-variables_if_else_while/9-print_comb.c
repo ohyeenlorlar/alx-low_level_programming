@@ -1,5 +1,6 @@
 #include <stdio.h>
-/**\m*main - main function
+/**
+*main - main function
 *Return: 0
 **/
 int main(void)
@@ -8,7 +9,7 @@ int a;
 for (a = '0'; a <= '9'; a++)
 {
 putchar(a);
-if (a = '8')
+if (a <= '8')
 {
 putchar(',');
 putchar(' ');
