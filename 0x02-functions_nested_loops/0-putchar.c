@@ -1,9 +1,9 @@
-#include "main"
+#include "main.h"
 /**
-*main - mainblock
+*main - main block
 *Return: 0
 */
-int main(void)
+ int main(void)
 {
 _putchar("_");
 _putchar("p");
