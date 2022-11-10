@@ -1,34 +1,23 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
  * _calloc - allocates memory for an array using malloc
  * @nmemb: elements of array
  * @size: bytes of the array
- *
+ * Description: sets memory to zero
  * Return: a pointer to the allocated memory
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int x, y;
-	char *array;
+	void *ptr;
 
-	y = nmemb * size;
-
-	if (nmemb == 0 || size == 0)
-	{
+	if (nmemb <= 0 || size <= 0)
 		return (NULL);
-	}
-
-	array = malloc(y);
-
-	if (array == NULL)
-	{
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
 		return (NULL);
-	}
-	for (x = 0 ; x < y ; x++)
-	{
-		array[x] = 0;
-	}
-	return (array);
+	_memset(ptr, 0, nmemb * size);
+
+	return (ptr);
 }
